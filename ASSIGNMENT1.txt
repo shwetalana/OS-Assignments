@@ -1,0 +1,852 @@
+Q1. Explore the following commands with various options, refer man pages for 
+    further help a) date b) cal c) bc d) echo e) who f) whoami g) logname g) uname h)
+    seq i) clear
+====>1)date
+user@hp ~
+$ date
+Thu, Sep 10, 2020  8:22:05 AM
+
+user@hp ~
+$ date +%d
+10
+
+user@hp ~
+$ date +%D
+09/10/20
+
+user@hp ~
+$ date +%a
+Thu
+
+user@hp ~
+$ date +%A
+Thursday
+
+user@hp ~
+$ date +%b
+Sep
+
+user@hp ~
+$ date +%B
+September
+
+user@hp ~
+$ date +%F
+2020-09-10
+
+
+user@hp ~
+$ date +%B" "%d" "%Y
+September 10 2020
+
+=====>2)cal
+
+user@hp ~
+$ cal
+   September 2020
+Su Mo Tu We Th Fr Sa
+       1  2  3  4  5
+ 6  7  8  9 10 11 12
+13 14 15 16 17 18 19
+20 21 22 23 24 25 26
+27 28 29 30
+
+
+user@hp ~
+$ cal 2019
+                               2019
+
+       January               February                 March
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+       1  2  3  4  5                   1  2                   1  2
+ 6  7  8  9 10 11 12    3  4  5  6  7  8  9    3  4  5  6  7  8  9
+13 14 15 16 17 18 19   10 11 12 13 14 15 16   10 11 12 13 14 15 16
+20 21 22 23 24 25 26   17 18 19 20 21 22 23   17 18 19 20 21 22 23
+27 28 29 30 31         24 25 26 27 28         24 25 26 27 28 29 30
+                                              31
+        April                   May                   June
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+    1  2  3  4  5  6             1  2  3  4                      1
+ 7  8  9 10 11 12 13    5  6  7  8  9 10 11    2  3  4  5  6  7  8
+14 15 16 17 18 19 20   12 13 14 15 16 17 18    9 10 11 12 13 14 15
+21 22 23 24 25 26 27   19 20 21 22 23 24 25   16 17 18 19 20 21 22
+28 29 30               26 27 28 29 30 31      23 24 25 26 27 28 29
+                                              30
+        July                  August                September
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+    1  2  3  4  5  6                1  2  3    1  2  3  4  5  6  7
+ 7  8  9 10 11 12 13    4  5  6  7  8  9 10    8  9 10 11 12 13 14
+14 15 16 17 18 19 20   11 12 13 14 15 16 17   15 16 17 18 19 20 21
+21 22 23 24 25 26 27   18 19 20 21 22 23 24   22 23 24 25 26 27 28
+28 29 30 31            25 26 27 28 29 30 31   29 30
+
+       October               November               December
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+       1  2  3  4  5                   1  2    1  2  3  4  5  6  7
+ 6  7  8  9 10 11 12    3  4  5  6  7  8  9    8  9 10 11 12 13 14
+13 14 15 16 17 18 19   10 11 12 13 14 15 16   15 16 17 18 19 20 21
+20 21 22 23 24 25 26   17 18 19 20 21 22 23   22 23 24 25 26 27 28
+27 28 29 30 31         24 25 26 27 28 29 30   29 30 31
+
+
+user@hp ~
+$ cal -m1
+   September 2020
+Mo Tu We Th Fr Sa Su
+    1  2  3  4  5  6
+ 7  8  9 10 11 12 13
+14 15 16 17 18 19 20
+21 22 23 24 25 26 27
+28 29 30
+
+
+user@hp ~
+$ cal -m3
+     August 2020         September 2020         October 2020
+Mo Tu We Th Fr Sa Su  Mo Tu We Th Fr Sa Su  Mo Tu We Th Fr Sa Su
+                1  2      1  2  3  4  5  6            1  2  3  4
+ 3  4  5  6  7  8  9   7  8  9 10 11 12 13   5  6  7  8  9 10 11
+10 11 12 13 14 15 16  14 15 16 17 18 19 20  12 13 14 15 16 17 18
+17 18 19 20 21 22 23  21 22 23 24 25 26 27  19 20 21 22 23 24 25
+24 25 26 27 28 29 30  28 29 30              26 27 28 29 30 31
+31
+
+user@hp ~
+$ cal aug 2015
+     August 2015
+Su Mo Tu We Th Fr Sa
+                   1
+ 2  3  4  5  6  7  8
+ 9 10 11 12 13 14 15
+16 17 18 19 20 21 22
+23 24 25 26 27 28 29
+30 31
+
+user@hp ~
+$ cal 6
+                               0006
+
+       January               February                 March
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+                1  2       1  2  3  4  5  6       1  2  3  4  5  6
+ 3  4  5  6  7  8  9    7  8  9 10 11 12 13    7  8  9 10 11 12 13
+10 11 12 13 14 15 16   14 15 16 17 18 19 20   14 15 16 17 18 19 20
+17 18 19 20 21 22 23   21 22 23 24 25 26 27   21 22 23 24 25 26 27
+24 25 26 27 28 29 30   28                     28 29 30 31
+31
+        April                   May                   June
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+             1  2  3                      1          1  2  3  4  5
+ 4  5  6  7  8  9 10    2  3  4  5  6  7  8    6  7  8  9 10 11 12
+11 12 13 14 15 16 17    9 10 11 12 13 14 15   13 14 15 16 17 18 19
+18 19 20 21 22 23 24   16 17 18 19 20 21 22   20 21 22 23 24 25 26
+25 26 27 28 29 30      23 24 25 26 27 28 29   27 28 29 30
+                       30 31
+        July                  August                September
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+             1  2  3    1  2  3  4  5  6  7             1  2  3  4
+ 4  5  6  7  8  9 10    8  9 10 11 12 13 14    5  6  7  8  9 10 11
+11 12 13 14 15 16 17   15 16 17 18 19 20 21   12 13 14 15 16 17 18
+18 19 20 21 22 23 24   22 23 24 25 26 27 28   19 20 21 22 23 24 25
+25 26 27 28 29 30 31   29 30 31               26 27 28 29 30
+
+       October               November               December
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+                1  2       1  2  3  4  5  6             1  2  3  4
+ 3  4  5  6  7  8  9    7  8  9 10 11 12 13    5  6  7  8  9 10 11
+10 11 12 13 14 15 16   14 15 16 17 18 19 20   12 13 14 15 16 17 18
+17 18 19 20 21 22 23   21 22 23 24 25 26 27   19 20 21 22 23 24 25
+24 25 26 27 28 29 30   28 29 30               26 27 28 29 30 31
+31
+
+user@hp ~
+$ cal 2014
+                               2014
+
+       January               February                 March
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+          1  2  3  4                      1                      1
+ 5  6  7  8  9 10 11    2  3  4  5  6  7  8    2  3  4  5  6  7  8
+12 13 14 15 16 17 18    9 10 11 12 13 14 15    9 10 11 12 13 14 15
+19 20 21 22 23 24 25   16 17 18 19 20 21 22   16 17 18 19 20 21 22
+26 27 28 29 30 31      23 24 25 26 27 28      23 24 25 26 27 28 29
+                                              30 31
+        April                   May                   June
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+       1  2  3  4  5                1  2  3    1  2  3  4  5  6  7
+ 6  7  8  9 10 11 12    4  5  6  7  8  9 10    8  9 10 11 12 13 14
+13 14 15 16 17 18 19   11 12 13 14 15 16 17   15 16 17 18 19 20 21
+20 21 22 23 24 25 26   18 19 20 21 22 23 24   22 23 24 25 26 27 28
+27 28 29 30            25 26 27 28 29 30 31   29 30
+
+        July                  August                September
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+       1  2  3  4  5                   1  2       1  2  3  4  5  6
+ 6  7  8  9 10 11 12    3  4  5  6  7  8  9    7  8  9 10 11 12 13
+13 14 15 16 17 18 19   10 11 12 13 14 15 16   14 15 16 17 18 19 20
+20 21 22 23 24 25 26   17 18 19 20 21 22 23   21 22 23 24 25 26 27
+27 28 29 30 31         24 25 26 27 28 29 30   28 29 30
+                       31
+       October               November               December
+Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa   Su Mo Tu We Th Fr Sa
+          1  2  3  4                      1       1  2  3  4  5  6
+ 5  6  7  8  9 10 11    2  3  4  5  6  7  8    7  8  9 10 11 12 13
+12 13 14 15 16 17 18    9 10 11 12 13 14 15   14 15 16 17 18 19 20
+19 20 21 22 23 24 25   16 17 18 19 20 21 22   21 22 23 24 25 26 27
+26 27 28 29 30 31      23 24 25 26 27 28 29   28 29 30 31
+                       30
+
+=====>bc
+
+
+====>echo
+
+user@hp ~
+$ echo sweety
+sweety
+
+
+user@hp ~
+$ echo -e "sweety \b patil"
+sweety patil
+
+user@hp ~
+$ echo -e "sweety \t patil"
+sweety   patil
+
+user@hp ~
+$ echo -e "sweety \n patil"
+sweety
+ patil
+
+user@hp ~
+$ echo $$
+1275
+
+user@hp ~
+$ echo * 1.txt
+1.txt 2.txt 3.txt 4.txt 5.txt a ab abc add.sh b c cdac cpp2 d ds ds2 e f file2.txt kuru os1 patil pramila shwet shwetalana soop.txt sop sweety x xyz 1.txt
+
+
+===>who-name of user
+
+====>whoami
+user@hp ~
+$ whoami
+user
+
+user@hp ~
+$ whoami --v
+whoami (GNU coreutils) 8.26
+Packaged by Cygwin (8.26-2)
+Copyright (C) 2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Richard Mlynarik.
+
+user@hp ~
+$ whoami --version
+whoami (GNU coreutils) 8.26
+Packaged by Cygwin (8.26-2)
+Copyright (C) 2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Richard Mlynarik.
+
+====>logname
+user@hp ~
+$ logname
+user
+
+====>username
+user@hp ~
+$ uname
+CYGWIN_NT-6.3
+
+user@hp ~
+$ uname -a
+CYGWIN_NT-6.3 hp 3.1.4(0.340/5/3) 2020-02-19 08:49 x86_64 Cygwin
+
+user@hp ~
+$ uname -r
+3.1.4(0.340/5/3)
+
+user@hp ~
+$ uname -s
+CYGWIN_NT-6.3
+
+user@hp ~
+$ uname -n
+hp
+
+user@hp ~
+$ uname -v
+2020-02-19 08:49
+
+user@hp ~
+$ uname -m
+x86_64
+
+===>seq
+user@hp ~
+$ seq 9
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+user@hp ~
+$ seq 3 7 20
+3
+10
+17
+
+user@hp ~
+$ seq 2 9
+2
+3
+4
+5
+6
+7
+8
+9
+
+user@hp ~
+$ seq -s " " 8
+1 2 3 4 5 6 7 8
+
+user@hp ~
+$ seq -w 8
+1
+2
+3
+4
+5
+6
+7
+8
+=====>clear=clear all commnads
+
+============================================================================================================
+2) Create three directory a b and c and create a.txt,b.txt and c.txt
+in each directory respectively and then copy c directory into the a.
+
+
+A)$ mkdir x y z
+  cd x
+  
+cat > a.txt
+
+cd y
+cat > b.txt
+
+cd z
+cat > c.txt
+
+
+cp -r c a
+
+B) mv b c
+
+c)alias sweety="ls -lh"
+
+
+D)mv x CDAC
+
+3)
+A)user@hp MINGW64 ~
+$ cat > file1.txt >file2.txt > file3.txt >file4.txt > file5.txt
+$ cat > file2.txt
+user@hp MINGW64 ~
+$ cat file1.txt file2.txt | grep s
+user@hp MINGW64 ~
+$ cat file1.txt file2.txt file3.txt file3.txt
+
+B)$ cat > file.txt
+nano file.txt
+(edit the file
+[ctrl o,enter,ctrl x])
+cat file.txt
+
+c) touch s1.txt s2.txt s3.txt s4.txt s5.txt
+D)rm-r a b c
+
+4)
+a)vi file1.txt
+[i,type,esc : wq,enter]
+cat file1.txt
+
+b)cat -n file1.txt
+
+c)tac file1.txt
+
+d)
+
+5)
+a)[column file1.txt]
+b)ls -n(asscending)
+ls -n -r[desc]
+
+c) mkdir .abcd
+ls
+ls -a
+touch xyz
+ls
+ls -a
+
+d)ls -l file1.txt
+touch file1.txt
+ls -l
+ls -l dir1
+touch dir1 touch neha.txtls -l neha.txt
+ls -t
+ls -rt
+
+e)ls -R
+
+f)ls -l
+
+g)$ ls -ld
+drwxr-xr-x 1 user 197609 0 Sep  8 23:34 .
+
+6)
+
+
+
+ls -n -r(descending)
+
+
+ col file1.txt
+
+
+
+
+Q3. A) Create five files file1.txt , file2.txt ,file3.txt file4.txt and
+file5.txt with some text inside it. Search for 's' character
+inside all the files using grep command.
+Also Use cat to view all file content together.
+
+user@hp MINGW64:~$ cat>file1.txt
+sweety patil
+user@hp MINGW64:~$ cat>file2.txt
+subham singh
+user@hp MINGW64:~$ cat>file3.txt
+shubham naik
+user@hp MINGW64:~$ cat>file4.txt
+i love stars
+user@hp MINGW64:~$ cat>file5.txt
+tushar more
+
+
+user@hp MINGW64:~$ cat file1.txt file2.txt file3.txt file4.txt file5.txt
+sweety patil
+subham singh
+shubham naik
+i love stars
+tushar more
+
+user@hp MINGW64:~$ grep s *
+grep: c: Is a directory
+grep: cdac: Is a directory
+file1.txt:sweety patil
+file2.txt:subham singh
+file3.txt:shubham naik
+file4.txt:i love stars
+file5.txt:tushar more
+grep: kuru: Is a directory
+
+B)Create file.txt using cat and edit that using nano editor.
+user@hp MINGW64:~$ cat>file.txt
+hello how are you??
+user@hp MINGW64:~$ nano file.txt
+user@hp MINGW64:~$ cat file.txt
+Are you fine??
+
+c)Create 5 empty files using touch command
+user@hp MINGW64:~$  touch a1 a2 a3 a4 a5
+
+D)Remove previously created directory a , b and c
+user@hp MINGW64:~/c$ rm -r a
+user@hp MINGW64:~/c$ rm -r c
+user@hp MINGW64:~/c$ rm -r b
+
+Q4. Create a file with some content using vi editor
+a) Display the file using cat command
+user@hp MINGW64:~$ vi os.text
+user@hp MINGW64:~$ cat os.text
+Hello are you there?
+
+b) Display line numbers along with content
+user@hp MINGW64:~$ cat -n os.text
+     1  Hello are you there?
+
+c) Display the file in reverse order using tac
+user@hp MINGW64:~$ cat>su
+sweety
+pramod 
+patil
+user@hp MINGW64:~$ cat su
+sweety
+pramod
+patil
+user@hp MINGW64:~$ tac su
+rajput
+singh
+subham
+
+d) Combine multiple files using cat command
+user@hp MINGW64:~$ cat os.text >> abc.txt
+user@hp MINGW64:~$ cat abc.txt
+hello i am there
+Hello are you there?
+
+
+Q5. Create Random some files and sub directories.
+a) display files row wise, column wise, 1 per row
+user@hp MINGW64:~$ ls -1
+a1
+a2
+a3
+a4
+a5
+abc.txt
+cdac
+file.txt
+file1.txt
+file2.txt
+file3.txt
+file4.txt
+file5.txt
+kuru
+os.text
+
+b) sort the files in ascending, descending order
+
+user@hp MINGW64:~$ ls -lS
+total 0
+drwxrwxrwx 1 user 197609 4096 Sep  8 22:07 cdac
+drwxrwxrwx 1 user 197609 4096 Sep  7 23:16 kuru
+-rw-rw-rw- 1 user 197609   52 Sep  8 22:46 file5.txt
+-rw-rw-rw- 1 user 197609  38 Sep  8 23:43 abc.txt
+-rw-rw-rw- 1 user 197609   22 Sep  8 22:45 file4.txt
+-rw-rw-rw- 1 user 197609   21 Sep  8 23:30 os.text
+-rw-rw-rw- 1 user 197609  15 Sep  8 23:07 file.txt
+-rw-rw-rw- 1 user 197609   15 Sep  8 22:45 file2.txt
+-rw-rw-rw- 1 user 197609   14 Sep  8 22:45 file3.txt
+-rw-rw-rw- 1 user 197609   13 Sep  8 22:44 file1.txt
+-rw-rw-rw- 1 user 197609    0 Sep  8 23:23 a1
+-rw-rw-rw- 1 user 197609   0 Sep  8 23:23 a2
+-rw-rw-rw- 1 user 197609    0 Sep  8 23:23 a3
+-rw-rw-rw- 1 user 197609   0 Sep  8 23:23 a4
+-rw-rw-rw- 1 user 197609    0 Sep  8 23:23 a5
+
+user@hp MINGW64:~$ ls -lSr
+total 0
+-rw-rw-rw- 1 user 197609    0 Sep  8 23:23 a5
+-rw-rw-rw- 1 user 197609    0 Sep  8 23:23 a4
+-rw-rw-rw- 1 user 197609    0 Sep  8 23:23 a3
+-rw-rw-rw- 1 user 197609   0 Sep  8 23:23 a2
+-rw-rw-rw- 1 user 197609   0 Sep  8 23:23 a1
+-rw-rw-rw- 1 user 197609  13 Sep  8 22:44 file1.txt
+-rw-rw-rw- 1 user 197609   14 Sep  8 22:45 file3.txt
+-rw-rw-rw- 1 user 197609   15 Sep  8 22:45 file2.txt
+-rw-rw-rw- 1 user 197609  15 Sep  8 23:07 file.txt
+-rw-rw-rw- 1 user 197609   21 Sep  8 23:30 os.text
+-rw-rw-rw- 1 user 197609   22 Sep  8 22:45 file4.txt
+-rw-rw-rw- 1 user 197609   38 Sep  8 23:43 abc.txt
+-rw-rw-rw- 1 user 197609  52 Sep  8 22:46 file5.txt
+drwxrwxrwx 1 user 197609 4096 Sep  7 23:16 kuru
+drwxrwxrwx 1 user 197609 4096 Sep  8 22:07 cdac
+
+
+c) Create some hidden files and sub directories and display them using “ls -a”
+user@hp MINGW64:~$ cat>.xyz
+this is a hidden file
+user@hp MINGW64:~$ ls -a
+.         .b1            .bashrc     .motd_shown                .viminfo  a2  a5       file.txt   file3.txt  kuru
+..        .bash_history  .landscape  .profile                   .xyz      a3  abc.txt  file1.txt  file4.txt  os.text
+.a1.text  .bash_logout   .local      .sudo_as_admin_successful  a1        a4
+
+
+d) Change time stamp of some files and directories using touch command and display the files using ls -t ls -rt
+
+
+
+e) Recursive display contents of your home directory.
+user@hp MINGW64:/$ ls -lrS
+total 580
+dr-xr-xr-x 12 root root      0 Sep  9 17:44 sys
+dr-xr-xr-x  9 root root      0 Sep  9 17:44 proc
+lrwxrwxrwx  1 root root      7 Aug  5 03:09 lib -> usr/lib
+lrwxrwxrwx  1 root root      7 Aug  5 03:09 bin -> usr/bin
+lrwxrwxrwx  1 root root      8 Aug  5 03:09 sbin -> usr/sbin
+lrwxrwxrwx  1 root root      9 Aug  5 03:09 lib64 -> usr/lib64
+lrwxrwxrwx  1 root root      9 Aug  5 03:09 lib32 -> usr/lib32
+lrwxrwxrwx  1 root root     10 Aug  5 03:09 libx32 -> usr/libx32
+drwxr-xr-x  1 root root   4096 Aug  5 03:12 var
+drwxr-xr-x  1 root root   4096 Aug  5 03:10 usr
+drwxrwxrwt  1 root root   4096 Sep  7 22:16 tmp
+drwxr-xr-x  1 root root   4096 Aug  5 03:09 srv
+drwxr-xr-x  1 root root   4096 Jul 10 19:29 snap
+drwxr-xr-x  1 root root   4096 Sep  9 17:44 run
+drwx------  1 root root   4096 Aug  5 03:12 root
+drwxr-xr-x  1 root root   4096 Aug  5 03:09 opt
+drwxr-xr-x  1 root root   4096 Sep  7 18:09 mnt
+drwxr-xr-x  1 root root   4096 Aug  5 03:09 media
+drwxr-xr-x  1 root root   4096 Sep  7 18:09 home
+drwxr-xr-x  1 root root   4096 Sep  9 17:44 etc
+drwxr-xr-x  1 root root   4096 Sep  9 17:44 dev
+drwxr-xr-x  1 root root   4096 Aug  5 03:17 boot
+-rwxr-xr-x  1 root root 591344 Jan  1  1970 init
+
+f) display all attributes of files and directories using ls -l
+user@hp MINGW64:~$ ls -l
+total 0
+-rw-rw-rw- 1 user 197609    0 Sep  8 23:23 a1
+-rw-rw-rw- 1 user 197609   0 Sep  8 23:23 a2
+-rw-rw-rw- 1 user 197609    0 Sep  8 23:23 a3
+-rw-rw-rw- 1 user 197609   0 Sep  8 23:23 a4
+-rw-rw-rw- 1 user 197609   0 Sep  8 23:23 a5
+-rw-rw-rw- 1 user 197609  38 Sep  8 23:43 abc.txt
+drwxrwxrwx 1 user 197609 4096 Sep  8 22:07 cdac
+-rw-rw-rw- 1 user 197609   15 Sep  8 23:07 file.txt
+-rw-rw-rw- 1 user 197609   13 Sep  8 22:44 file1.txt
+-rw-rw-rw- 1 user 197609  15 Sep  8 22:45 file2.txt
+-rw-rw-rw- 1 user 197609  14 Sep  8 22:45 file3.txt
+-rw-rw-rw- 1 user 197609  22 Sep  8 22:45 file4.txt
+-rw-rw-rw- 1 user 197609  52 Sep  8 22:46 file5.txt
+drwxrwxrwx 1 user 197609 4096 Sep  7 23:16 kuru
+-rw-rw-rw- 1 user 197609   0 Jun 20  2021 mumbai.txt
+-rw-rw-rw- 1 user 197609  21 Sep  8 23:30 os.text
+drwxrwxrwx 1 user 197609 4096 Sep  9 18:01 ravi
+-rw-rw-rw- 1 user 197609   6 Sep  9 19:00 su
+
+
+
+
+g) display attributes of a directory using ls -ld
+user@hp MINGW64:~$ ls -lD
+  total 0
+  -rw-rw-rw- 1 user 197609    0 Sep  8 23:23 a1
+  -rw-rw-rw- 1 user 197609    0 Sep  8 23:23 a2
+  -rw-rw-rw- 1 user 197609    0 Sep  8 23:23 a3
+  -rw-rw-rw- 1 user 197609    0 Sep  8 23:23 a4
+  -rw-rw-rw- 1 user 197609    0 Sep  8 23:23 a5
+  -rw-rw-rw- 1 user 197609   38 Sep  8 23:43 abc.txt
+  drwxrwxrwx 1 user 197609   4096 Sep  8 22:07 cdac
+  -rw-rw-rw- 1 user 197609   15 Sep  8 23:07 file.txt
+  -rw-rw-rw- 1 user 197609   13 Sep  8 22:44 file1.txt
+  -rw-rw-rw- 1 user 197609   15 Sep  8 22:45 file2.txt
+  -rw-rw-rw- 1 user 197609   14 Sep  8 22:45 file3.txt
+  -rw-rw-rw- 1 user 197609   22 Sep  8 22:45 file4.txt
+  -rw-rw-rw- 1 user 197609   52 Sep  8 22:46 file5.txt
+  drwxrwxrwx 1 user 197609   4096 Sep  7 23:16 kuru
+  -rw-rw-rw- 1 user 197609   0 Jun 20  2021 mumbai.txt
+  -rw-rw-rw- 1 user 197609   22 1 Sep  8 23:30 os.text
+  drwxrwxrwx 1 user 197609  4096 Sep  9 18:01 ravi
+  -rw-rw-rw- 1 user 197609    6 Sep  9 19:00 su
+//DIRED// 57 59 107 109 157 159 207 209 257 259 307 314 362 366 414 422 470 479 527 536 584 593 641 650 698 707 755 759 807 817 865 872 920 924 972 974
+//DIRED-OPTIONS// --quoting-style=shell-escape
+
+
+Q1. Create directory of your name and then create 4 files inside it named
+	a.txt, b.txt, c.txt and d.sh. And change the directory permission to
+	only user and also files permission to only user such that
+a)user can read and write the file a.txt and b.txt
+user@hp MINGW64:~/user$ touch a.txt b.txt c.txt d.sh
+user@hp MINGW64:~$ chmod 700 a.txt
+user@hp MINGW64:~$ chmod 700 b.txt
+
+b)user can write the file $ chmod u-r c.txt
+
+c)user can exectuable the file d.sh. Make
+Contents of file d.sh:
+#/bin/sh
+ls -lh
+user@hp MINGW64:~/user@hp$ vi d.sh
+
+
+Q2. Change the permission of the previous directory to executable only.
+Analyze the output.
+us:~/SWEETY$ ls -l
+total 0
+-rw-rw-rw- 1 user 197609  0 Sep  9 22:02 a.txt
+-rw-rw-rw- 1 user 197609  0 Sep  9 22:02 b.txt
+-rwxrw-rw- 1 user 197609  0 Sep  9 22:02 c.txt
+---xrwxrwx 1 user 197609  20 Sep 10 00:37 d.sh
+
+Q3. Change the permission of the previous directory to read only.
+Analyze the output.
+:~/SWEETY$ chmod u=r d.sh
+user@hp MINGW64:~/SWEETY$ ls -l
+total 0
+-rw-rw-rw- 1 user 197609  0 Sep  9 22:02 a.txt
+-rw-rw-rw- 1 user 197609 0 Sep  9 22:02 b.txt
+-rwxrw-rw- 1 user 197609  0 Sep  9 22:02 c.txt
+-r--rwxrwx 1 user 197609 20 Sep 10 00:37 d.sh
+
+Q4. Use echo to list the all files of your home directory.
+user@hp MINGW64:~$ echo *
+SWEETY a.txt abc.txt b.txt cdac file.txt file1.txt file2.txt file3.txt file4.txt file5.txt kuru mumbai.txt os.text ravi
+
+Q5. Use echo to list the all files of /etc/ directory
+user@hp MINGW64:/etc$ echo *
+
+Q6. Use echo to list the all files of /etc/ directory with extension name .conf
+user@hp MINGW64:/etc$ echo *.conf
+adduser.conf ca-certificates.conf debconf.conf deluser.conf e2scrub.conf fuse.conf gai.conf hdparm.conf host.conf kernel-img.conf ld.so.conf libaudit.conf logrotate.conf ltrace.conf mke2fs.conf multipath.conf nsswitch.conf overlayroot.conf overlayroot.local.conf pam.conf popularity-contest.conf resolv.conf rsyslog.conf sensors3.conf sos.conf sysctl.conf ucf.conf xattr.conf
+
+Q7. Use echo to append your name to a.txt
+user@hp MINGW64:~$ echo SHWETA >> a.txt
+
+1.Create Three level nested directory a,b and c
+user@hp MINGW64:~$ mkdir a b c
+
+a)Create at least one hidden file in each directory
+user@hp MINGW64:~/a$ touch .h1 
+user@hp MINGW64:~/b$ touch .h2
+user@hp MINGW64:~/c$ touch .h3
+
+b)Create at least one normal text file in each directory
+
+user@hp MINGW64-B3G5TU87
+user@hp MINGW64:~/a$ touch n1
+user@hp MINGW64:~/b$ touch n2
+user@hp MINGW64:~/c$ touch n3
+
+c)Copy c into a
+user@hp MINGW64:~$ cp -R c a
+
+d)Copy file inside a into b
+user@hp MINGW64:~$ cp -r b/n2 a
+
+
+2.Change the third level directory c permission to read only
+user@hp MINGW64:~$ chmod a=r c
+user@hp MINGW64:~$ ls -l
+total 0
+drwx------ 1 user 197609 4096 Sep 10 00:37 SUBHAM
+drwxrwxrwx 1 user 197609 4096 Sep 10 15:25 a
+drwxrwxrwx 1 user 197609 4096 Sep 10 15:18 b
+dr--r--r-- 1 user 197609 4096 Sep 10 15:19 c
+
+3.Try copying third level c directory to outside of a
+user@hp MINGW64:~$ cp -r c b
+cp: cannot stat 'c/.h3': Permission denied
+cp: cannot stat 'c/n3': Permission denied
+
+4.Create the directory  “data“ inside b
+user@hp MINGW64:~$ cd b
+user@hp MINGW64:~/b$ mkdir data
+
+5.Change the permission of b to read and write only
+user@hp MINGW64:~$ chmod a=rw b
+
+6.Create directory “data2”  inside b
+user@hp MINGW64:~$ cd b
+-bash: cd: b: Permission denied
+user@hp MINGW64:~$ mkdir b/data2
+mkdir: cannot create directory ‘b/data2’: Permission denied
+
+7.Create data.txt file inside b
+user@hp MINGW64:~$ touch b/data.txt
+touch: cannot touch 'b/data.txt': Permission denied
+
+8.Rename the second level directory c to copied_dir
+user@hp MINGW64:~/a$ mv c copied_dir
+
+9.Change permission of copied_dir to only executable
+user@hp MINGW64:~/a$ chmod a=x copied_dir
+
+10.Try ls on copied_dir
+user@hp MINGW64:~/a/copied_dir$ ls
+ls: cannot open directory '.': Permission denied
+
+11.Try moving copied_dir to outside of a
+user@hp MINGW64:~/a$ mv copied_dir c
+
+12.Try moving data directory outside of a
+user@hp MINGW64:~/a$ mv data c
+mv: cannot stat 'data': No such file or directory
+
+13.Now change the owner of the directory a to root
+user@hp MINGW64:~$ chown subham root
+chown: cannot access 'root': No such file or directory
+
+14.Change permission of a to read write and executable to only user
+user@hp MINGW64:~$ chmod u=rwx a
+drwx------ 1 user 197609 4096 Sep 10 15:49 a
+
+15.Try creating directory sample inside a
+user@hp MINGW64:~/a$ mkdir Sample
+
+16.Create directory x outside a
+user@hp MINGW64:~$ mkdir X
+user@hp MINGW64:~$ ls
+SWEETY X  a  b  file.txt  file1.txt  file2.txt  file3.txt  file4.txt  file5.txt  kuru
+
+17.Try moving x inside a
+user@hp MINGW64:~$ mv X a
+user@hp MINGW64:~/a$ ls
+Sample  X  b  c  n1  n2
+
+18.Create directory movies
+user@hp MINGW64:~$ mkdir movies
+user@hp MINGW64:~$ ls
+SWEETY  a  b  file.txt  file1.txt  file2.txt  file3.txt  file4.txt  file5.txt  kuru  movies
+
+19.Change group of movies to sudo
+user@hp MINGW64:~$ groupadd movies
+groupadd: Permission denied.
+groupadd: cannot lock /etc/group; try again later.
+
+20.Change group of movies to avahi
+user@hp MINGW64:~$ groupadd movies
+groupadd: Permission denied.
+groupadd: cannot lock /etc/group; try again later.
+
+25.Try deleting the file
+user@hp MINGW64:~$ rm -r a b
+user@hp MINGW64:~$ ls
+SWEETY  file.txt  file1.txt  file2.txt  file3.txt  file4.txt  file5.txt  kuru  movies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
